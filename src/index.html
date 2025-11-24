@@ -9,7 +9,87 @@
             href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,600&display=swap"
             rel="stylesheet"
         />
-        <title>Document</title>
+        <title>Weather App</title>
     </head>
-    <body></body>
+    <body>
+        <header class="header">
+            <img
+                class="logo"
+                src="./assets/logo.svg"
+                alt="logo of the webpage"
+            />
+            <div class="dropdown dropdown-units">
+                <button class="button-units">
+                    <img src="./assets/icon-units.svg" alt="icon units" />
+                    <span>Units</span>
+                    <img
+                        src="./assets/icon-dropdown.svg"
+                        alt="dropdown shape"
+                    />
+                </button>
+                <div class="menu-units">
+                    <button class="meteric-switch">Switch to Imperial</button>
+                    <div class="unit-category">
+                        <h2 class="unit-to-choose">Temperature</h2>
+                        <div class="unit-options">
+                            <button class="unit-option selected">
+                                <span>Celsius (°C)</span>
+                                <img
+                                    src="./assets/icon-checkmark.svg"
+                                    alt="check mark"
+                                />
+                            </button>
+                            <button class="unit-option">
+                                <span>Fahrenheit (°F)</span>
+                                <img
+                                    src="./assets/icon-checkmark.svg"
+                                    alt="check mark"
+                                />
+                            </button>
+                        </div>
+                    </div>
+                    <div class="spacer"></div>
+                    <div class="unit-category">
+                        <h2 class="unit-to-choose">Wind Speed</h2>
+                        <div class="unit-options">
+                            <button class="unit-option selected">
+                                <span>km/h</span>
+                                <img
+                                    src="./assets/icon-checkmark.svg"
+                                    alt="check mark"
+                                />
+                            </button>
+                            <button class="unit-option">
+                                <span>mph</span>
+                                <img
+                                    src="./assets/icon-checkmark.svg"
+                                    alt="check mark"
+                                />
+                            </button>
+                        </div>
+                    </div>
+                    <div class="spacer"></div>
+                    <div class="unit-category">
+                        <h2 class="unit-to-choose">Precipitation</h2>
+                        <div class="unit-options">
+                            <button class="unit-option selected">
+                                <span>Millimeters (mm)</span>
+                                <img
+                                    src="./assets/icon-checkmark.svg"
+                                    alt="check mark"
+                                />
+                            </button>
+                            <button class="unit-option">
+                                <span>Inches (in)</span>
+                                <img
+                                    src="./assets/icon-checkmark.svg"
+                                    alt="check mark"
+                                />
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+    </body>
 </html>
