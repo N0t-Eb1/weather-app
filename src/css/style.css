@@ -1,1 +1,32 @@
 @import "./reset.css";
+
+:root {
+    /* ---COLORS--- */
+    --neutral-0: #fff;
+    --neutral-200: #d4d3d9;
+    --neutral-300: #acacb7;
+    --neutral-600: #3c3b5e;
+    --neutral-700: #302f4a;
+    --neutral-800: #262540;
+    --neutral-900: #02012c;
+
+    --orange-500: #ff820a;
+
+    --blue-500: #4658d9;
+    --blue-700: #2b1b9c;
+
+    /* ---FONTS--- */
+    --DM-Sans: "DM Sans", sans-serif;
+    --Bricolage-Grotesque: "Bricolage Grotesque", sans-serif;
+
+    /* ---TEXT PRESETS--- */
+    --text-preset-1: italic 600 6rem var(--DM-Sans);
+    --text-preset-2: 700 3.25rem/120% var(--Bricolage-Grotesque);
+    --text-preset-3: 300 2rem var(--DM-Sans);
+    --text-preset-4: 700 1.75rem/120% var(--DM-Sans);
+    --text-preset-5: 600 1.25rem/120% var(--DM-Sans);
+    --text-preset-5-md: 500 1.25rem/120% var(--DM-Sans);
+    --text-preset-6: 500 1.125rem/120% var(--DM-Sans);
+    --text-preset-7: 500 1rem/120% var(--DM-Sans);
+    --text-preset-8: 500 0.875rem/120% var(--DM-Sans);
+}
