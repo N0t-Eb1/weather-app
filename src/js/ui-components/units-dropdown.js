@@ -1,5 +1,5 @@
 import { listen } from "../helpers";
-import { getUnits, getPresetToSwitch } from "../weather-units";
+import { getUnits, isMetric } from "../weather-units";
 
 const unitCategories = document.querySelectorAll(".menu-units .unit-category");
 const presetToSwitchBtn = document.querySelector(".meteric-switch");
@@ -17,10 +17,11 @@ function feedUnits(units) {
     });
 }
 listen("units changed", feedUnits);
-feedUnits(getUnits());
 
-function updatePresetToSwitchText(preset) {
-    presetToSwitchBtn.textContent = `Switch to ${preset}`;
+function updatePresetToSwitchText(isMetric) {
+    presetToSwitchBtn.textContent = `Switch to ${isMetric ? "Imperial" : "Metric"}`;
 }
 listen("preset update", updatePresetToSwitchText);
-updatePresetToSwitchText(getPresetToSwitch());
+
+feedUnits(getUnits());
+updatePresetToSwitchText(isMetric());
