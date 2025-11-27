@@ -1,4 +1,4 @@
-import { getUnitsParams } from "./weather-units";
+import { getUnits } from "./weather-units";
 
 const url = "https://api.open-meteo.com/v1/forecast";
 
@@ -16,14 +16,14 @@ const params = {
     hourly: ["temperature_2m", "weather_code"],
 };
 
-export default async function getWeather(location) {
+export async function getWeather(location) {
     const fetchUrl = new URL(url);
 
     fetchUrl.search = new URLSearchParams({
         latitude: location.latitude,
         longitude: location.longitude,
         ...params,
-        ...getUnitsParams(),
+        ...getUnits(),
     });
 
     const response = await fetch(fetchUrl);
