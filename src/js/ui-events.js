@@ -2,10 +2,13 @@ import { emit } from "./helpers";
 
 const actions = {
     closeDropdown(_, e) {
-        const openDropdown = document.querySelector(".dropdown.open");
+        const openDropdowns = document.querySelectorAll(".dropdown.open");
 
-        if (openDropdown && !openDropdown.contains(e.target))
-            openDropdown.classList.remove("open");
+        if (openDropdowns)
+            openDropdowns.forEach(dropdown => {
+                if (!dropdown.contains(e.target))
+                    dropdown.classList.remove("open");
+            });
     },
 
     toggleDropdown(target) {
@@ -27,7 +30,10 @@ const actions = {
 };
 
 window.addEventListener("click", e => {
-    const target = e.target.closest("[data-action-click]");
+    let target = e.target.closest("[data-action-click]");
 
-    if (target) actions[target.dataset.actionClick](target, e);
+    while (target) {
+        actions[target.dataset.actionClick](target, e);
+        target = target.parentNode.closest("[data-action-click]");
+    }
 });
