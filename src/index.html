@@ -12,119 +12,130 @@
         <title>Weather App</title>
     </head>
     <body data-action-click="closeDropdown">
-        <div class="container">
-            <header class="header">
-                <img
-                    class="logo"
-                    src="./assets/logo.svg"
-                    alt="logo of the webpage"
-                />
-                <div class="dropdown dropdown-units">
+        <header class="container header">
+            <img
+                class="logo"
+                src="./assets/logo.svg"
+                alt="logo of the webpage"
+            />
+            <div class="dropdown dropdown-units">
+                <button class="button-units" data-action-click="toggleDropdown">
+                    <img src="./assets/icon-units.svg" alt="icon units" />
+                    <span>Units</span>
+                    <img
+                        src="./assets/icon-dropdown.svg"
+                        alt="dropdown shape"
+                    />
+                </button>
+                <div class="dropdown-content menu-units">
                     <button
-                        class="button-units"
-                        data-action-click="toggleDropdown"
-                    >
-                        <img src="./assets/icon-units.svg" alt="icon units" />
-                        <span>Units</span>
-                        <img
-                            src="./assets/icon-dropdown.svg"
-                            alt="dropdown shape"
-                        />
-                    </button>
-                    <div class="dropdown-content menu-units">
-                        <button
-                            class="meteric-switch"
-                            data-action-click="switchPreset"
-                        ></button>
-                        <div class="unit-category" data-unit="temperature_unit">
-                            <h2 class="unit-to-choose">Temperature</h2>
-                            <div class="unit-options">
-                                <button
-                                    class="unit-option"
-                                    data-option="celsius"
-                                    data-action-click="changeUnits"
-                                >
-                                    <span>Celsius (°C)</span>
-                                    <img
-                                        src="./assets/icon-checkmark.svg"
-                                        alt="check mark"
-                                    />
-                                </button>
-                                <button
-                                    class="unit-option"
-                                    data-option="fahrenheit"
-                                    data-action-click="changeUnits"
-                                >
-                                    <span>Fahrenheit (°F)</span>
-                                    <img
-                                        src="./assets/icon-checkmark.svg"
-                                        alt="check mark"
-                                    />
-                                </button>
-                            </div>
+                        class="meteric-switch"
+                        data-action-click="switchPreset"
+                    ></button>
+                    <div class="unit-category" data-unit="temperature_unit">
+                        <h2 class="unit-to-choose">Temperature</h2>
+                        <div class="unit-options">
+                            <button
+                                class="unit-option"
+                                data-option="celsius"
+                                data-action-click="changeUnits"
+                            >
+                                <span>Celsius (°C)</span>
+                                <img
+                                    src="./assets/icon-checkmark.svg"
+                                    alt="check mark"
+                                />
+                            </button>
+                            <button
+                                class="unit-option"
+                                data-option="fahrenheit"
+                                data-action-click="changeUnits"
+                            >
+                                <span>Fahrenheit (°F)</span>
+                                <img
+                                    src="./assets/icon-checkmark.svg"
+                                    alt="check mark"
+                                />
+                            </button>
                         </div>
-                        <div class="spacer"></div>
-                        <div class="unit-category" data-unit="wind_speed_unit">
-                            <h2 class="unit-to-choose">Wind Speed</h2>
-                            <div class="unit-options">
-                                <button
-                                    class="unit-option"
-                                    data-option="kmh"
-                                    data-action-click="changeUnits"
-                                >
-                                    <span>km/h</span>
-                                    <img
-                                        src="./assets/icon-checkmark.svg"
-                                        alt="check mark"
-                                    />
-                                </button>
-                                <button
-                                    class="unit-option"
-                                    data-option="mph"
-                                    data-action-click="changeUnits"
-                                >
-                                    <span>mph</span>
-                                    <img
-                                        src="./assets/icon-checkmark.svg"
-                                        alt="check mark"
-                                    />
-                                </button>
-                            </div>
+                    </div>
+                    <div class="spacer"></div>
+                    <div class="unit-category" data-unit="wind_speed_unit">
+                        <h2 class="unit-to-choose">Wind Speed</h2>
+                        <div class="unit-options">
+                            <button
+                                class="unit-option"
+                                data-option="kmh"
+                                data-action-click="changeUnits"
+                            >
+                                <span>km/h</span>
+                                <img
+                                    src="./assets/icon-checkmark.svg"
+                                    alt="check mark"
+                                />
+                            </button>
+                            <button
+                                class="unit-option"
+                                data-option="mph"
+                                data-action-click="changeUnits"
+                            >
+                                <span>mph</span>
+                                <img
+                                    src="./assets/icon-checkmark.svg"
+                                    alt="check mark"
+                                />
+                            </button>
                         </div>
-                        <div class="spacer"></div>
-                        <div
-                            class="unit-category"
-                            data-unit="precipitation_unit"
-                        >
-                            <h2 class="unit-to-choose">Precipitation</h2>
-                            <div class="unit-options">
-                                <button
-                                    class="unit-option"
-                                    data-option="mm"
-                                    data-action-click="changeUnits"
-                                >
-                                    <span>Millimeters (mm)</span>
-                                    <img
-                                        src="./assets/icon-checkmark.svg"
-                                        alt="check mark"
-                                    />
-                                </button>
-                                <button
-                                    class="unit-option"
-                                    data-option="inch"
-                                    data-action-click="changeUnits"
-                                >
-                                    <span>Inches (in)</span>
-                                    <img
-                                        src="./assets/icon-checkmark.svg"
-                                        alt="check mark"
-                                    />
-                                </button>
-                            </div>
+                    </div>
+                    <div class="spacer"></div>
+                    <div class="unit-category" data-unit="precipitation_unit">
+                        <h2 class="unit-to-choose">Precipitation</h2>
+                        <div class="unit-options">
+                            <button
+                                class="unit-option"
+                                data-option="mm"
+                                data-action-click="changeUnits"
+                            >
+                                <span>Millimeters (mm)</span>
+                                <img
+                                    src="./assets/icon-checkmark.svg"
+                                    alt="check mark"
+                                />
+                            </button>
+                            <button
+                                class="unit-option"
+                                data-option="inch"
+                                data-action-click="changeUnits"
+                            >
+                                <span>Inches (in)</span>
+                                <img
+                                    src="./assets/icon-checkmark.svg"
+                                    alt="check mark"
+                                />
+                            </button>
                         </div>
                     </div>
                 </div>
-            </header>
-        </div>
+            </div>
+        </header>
+        <main class="container main">
+            <h1 class="hero-text">How’s the sky looking today?</h1>
+
+            <div class="search-container">
+                <div class="search-input">
+                    <img
+                        class="search-input__icon"
+                        src="./assets/icon-search.svg"
+                        alt="search icon"
+                    />
+                    <input
+                        class="search-input__input"
+                        type="text"
+                        placeholder="Search for a place..."
+                    />
+                </div>
+                <button class="search-button">Search</button>
+            </div>
+        </main>
     </body>
 </html>
