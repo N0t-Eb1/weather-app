@@ -215,6 +215,10 @@ body {
     &:focus {
         outline: none;
     }
+
+    &::placeholder {
+        color: var(--neutral-200);
+    }
 }
 
 .search-button {
