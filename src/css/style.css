@@ -175,6 +175,7 @@ body {
 
 .main {
     margin-top: 2rem;
+    padding-bottom: 1rem;
 }
 
 .hero-text {
@@ -225,4 +226,79 @@ body {
     padding: 1rem 1.5rem;
     background-color: var(--blue-500);
     border-radius: 12px;
+}
+
+.weather-data-display {
+    margin-top: 2rem;
+}
+
+.general-with-bg {
+    background-image: url("../assets/bg-today-small.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 20px;
+    height: 17.875rem;
+    padding-inline: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.location-and-date-time {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.location {
+    font: var(--text-preset-4);
+}
+
+.date-time {
+    font: var(--text-preset-6);
+    color: var(--neutral-200);
+}
+
+.current-temp {
+    display: flex;
+    justify-content: center;
+    @media (width >= 23.43rem) {
+        gap: 1.25rem;
+    }
+}
+
+.current-temp__weather-code-icon {
+    width: 7.5rem;
+}
+
+.current-temp__number {
+    font: var(--text-preset-1);
+}
+
+.weather-stats-grid {
+    margin-top: 1.25rem;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(min(9.375rem, 100%), 1fr));
+}
+
+.weather-stat {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 1.25rem;
+    background-color: var(--neutral-800);
+    border-radius: 12px;
+}
+
+.weather-stat__stat {
+    font: var(--text-preset-6);
+    color: var(--neutral-200);
+}
+
+.weather-stat__number {
+    font: var(--text-preset-3);
 }
