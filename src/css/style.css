@@ -283,7 +283,7 @@ body {
     margin-top: 1.25rem;
     display: grid;
     gap: 1rem;
-    grid-template-columns: repeat(auto-fit, minmax(min(9.375rem, 100%), 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(9rem, 100%), 1fr));
 }
 
 .weather-stat {
@@ -302,4 +302,44 @@ body {
 
 .weather-stat__number {
     font: var(--text-preset-3);
+}
+
+.section-header {
+    font: var(--text-preset-5);
+}
+
+.daily-forecasts-header {
+    margin-top: 2rem;
+}
+
+.daily-forecasts-grid {
+    margin-top: 1.25rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(5.563rem, 100%), 1fr));
+    gap: 1rem;
+}
+
+.daily-forecast {
+    padding: 1rem 0.625rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    background-color: var(--neutral-800);
+    border-radius: 12px;
+}
+
+.daily-forecast__weekday {
+    font: var(--text-preset-6);
+}
+
+.daily-forecast__weather-icon {
+    width: 3.75rem;
+}
+
+.daily-forecast__temps {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    font: var(--text-preset-7);
 }
