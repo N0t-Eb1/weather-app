@@ -195,6 +195,8 @@ body {
 }
 
 .search-input {
+    position: relative;
+
     flex-grow: 1;
     background-color: var(--neutral-800);
     padding: 1rem 1.5rem;
@@ -205,7 +207,8 @@ body {
     gap: 1rem;
     color: var(--neutral-200);
     cursor: text;
-    &:focus-within {
+
+    &:has(input:focus) {
         outline: var(--outline);
     }
 }
@@ -223,6 +226,61 @@ body {
     &::placeholder {
         color: var(--neutral-200);
     }
+}
+
+.search-results {
+    position: absolute;
+    display: none;
+
+    top: 100%;
+    inset-inline: 0;
+    margin-top: 0.625rem;
+    font: var(--text-preset-7);
+    cursor: default;
+
+    &.visible {
+        display: block;
+    }
+}
+
+.results-list {
+    background-color: var(--neutral-800);
+    padding: 0.5rem;
+    border-radius: 12px;
+    max-height: 17.2rem;
+    overflow-y: auto;
+}
+
+.location-item,
+.general-result {
+    padding: 0.625rem 0.5rem;
+    border-radius: 8px;
+    width: 100%;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.general-result {
+    flex-direction: row;
+    gap: 0.625rem;
+
+    & > img {
+        animation: spin 1s linear infinite;
+    }
+}
+
+.location-item:hover {
+    background-color: var(--neutral-700);
+}
+
+.location-item__name {
+    font: var(--text-preset-6);
+}
+.location-item__admin {
+    font: var(--text-preset-7);
+    color: var(--neutral-300);
 }
 
 .search-button {
@@ -470,5 +528,14 @@ body {
     .hourly-forecasts {
         position: sticky;
         top: 5.7rem;
+    }
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
     }
 }
